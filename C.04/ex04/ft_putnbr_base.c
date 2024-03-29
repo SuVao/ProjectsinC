@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pesilva- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 20:40:13 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/03/13 10:03:02 by pesilva-         ###   ########.fr       */
+/*   Updated: 2024/03/29 15:39:20 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int	base_check(int base_tam, char *base)
 	return (0);
 }
 
+
 void	ft_putnbr_base(int nbr, char *base)
 {
 	long	lnb;
@@ -81,8 +82,8 @@ void	ft_putnbr_base(int nbr, char *base)
 		}
 	}
 }
-/*
-int		main(void)
+
+/*int		main(void)
 {
 	// base binaria
 	printf("Bases binarias, n = 47. \"01\" e \"\\/\"\n");
