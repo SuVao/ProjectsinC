@@ -1,119 +1,81 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: pesilva- <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 10:05:08 by pesilva-          #+#    #+#             */
-/*   Updated: 2024/03/18 13:57:41 by pesilva-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
-#include <unistd.h>
 
-int	ft_strlen(char *str)
+int		ft_atoi_erro(char *base) //verificaçao de erros da base
 {
-	int	i;
+	int		i;
+	int		j;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (base[i])
+	{
+		j = 0;
+		while (base[j])
+		{
+			if (base[i] == base[j] && i != j) // verifificaçao de acaracteres repetidos
+				return (0);
+			j++;
+		}
+		if (base[i] <= 32 || base[i] == '+' || base[i] == '-') // erro caso calhe as condiçoes
+			return (0);
 		i++;
+	}
 	return (i);
 }
 
-int	base_check(int base_tam, char *base)
+int	ft_test_base(char str, char *base) //verificaçao de caracter entre a string e a base
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	if (base_tam <= 1)
-		return (1);
-	while (base[i] != '\0')
-	{
-		if (base[i] == '-' || base[i] == '+')
-			return (1);
-		j = i + 1;
-		while (base[j] != '\0')
-		{
-			if (base[i] == base[j])
-				return (1);
-			j++;
-		}
-		i++;
-	}
-	return (0);
-}
-
-int	ft_atoi(char *str)
-{
-	int	i;
-	int	res;
-	int	nega;
-
-	nega = 1;
-	res = 0;
-	i = 0;
-	if (str[i] == '-')
-		nega *= -1;
-	while (str[i] != '\0')
-	{
-		if ((str[i] <= '9' && str[i] >= '0') 
-			|| (str[i] <= 'a' && str[i] >= 'f'))
-			res = (res * 10) + str[i] - '0';
-		i++;
-	}
-	return (res * nega);
-}
-
-int	ft_putnbr_base(int nbr, char *base)
-{
-	long	lnb;
-	long	base_tam;
-	long	resu;
-
-	resu = 0;
-	lnb = nbr;
-	base_tam = ft_strlen(base);
-	if (base_check(base_tam, base) == 0)
-	{
-		if (lnb < 0)
-		{
-			lnb = lnb * -1;
-			write(1, "-", 1);
-		}
-		if (lnb < base_tam)
-			write(1, &base[lnb], 1);
-		else
-			resu = ft_putnbr_base(lnb / base_tam, base);
-	}
-	return (resu);
-}
-
-int	ft_atoi_base(char *str, char *base)
-{
-	long	res;
-	int		tam1;
-	int		tam2;
-	int		nega;
 	int		i;
 
 	i = 0;
-	nega = 1;
-	tam1 = ft_strlen(str);
-	tam2 = ft_strlen(base);
-	res = 0;
-	if (base_check(tam2, base) == 0)
+	while (base[i])
 	{
-		while (str[i] != '\0')
-		{
-			res = ft_putnbr_base(ft_atoi(&str[i]), base);
-			i++;
-		}
+		if (str == base[i])
+			return (i);
+		i++;
 	}
-	return (res);
+	return (-1);
+}
+
+int		ft_atoi_convert(char *str, int *i) // checkar o sinal e condiçoes
+{
+	int		sign;
+
+	sign = 1;
+	while (str[*i] <= 32)
+		(*i)++;
+	while (str[*i] == '+' || str[*i] == '-')
+	{
+		if (str[*i] == '-')
+			sign *= -1;
+		(*i)++;
+	}
+	return (sign);
+}
+
+int		ft_atoi_base(char *str, char *base)
+{
+	int		i; // 
+	int		sign; // sinal
+	int		tam; //checagem da base
+	int		res; //resultado
+	int		ver;
+
+	i = 0;
+	res = 0;
+	tam = ft_atoi_erro(base); //lendo a base para caso de erro
+	if (tam >= 2)
+	{
+		sign = ft_atoi_convert(str, &i);
+		ver = ft_test_base(str[i], base);
+		while (ver != -1)
+		{
+			res = (res * tam) + ver;
+			i++;
+			ver = ft_test_base(str[i], base);
+		}
+		return (res * sign);
+	}
+	return (0);
 }
 
 void	ft_atoi_base_test(char *str, char *base, int expected_number)
