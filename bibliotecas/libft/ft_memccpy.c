@@ -24,7 +24,7 @@ int main()
 	const char	src[] = {"ola caralho!"};
 	char	dest[20];
 	
-	ft_memccpy(dest, src, 97, 6);
+	ft_memccpy(dest, src, 105, 6);
 	printf("%s \n", dest);
 	return (0);
 }
