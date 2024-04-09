@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 09:41:27 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/09 09:41:27 by marvin           ###   ########.fr       */
+/*   Created: 2024/04/09 09:42:49 by marvin            #+#    #+#             */
+/*   Updated: 2024/04/09 09:42:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-void *ft_memset(void *ptr, int value, int num)
+size_t		ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int		i;
-	unsigned char	*char_ptr;
+	size_t	i;
+	size_t	src_len;
 
 	i = 0;
-	char_ptr = ptr;
-	while (i < num)
-		char_ptr[i++] = value;
-	return (ptr);
+	src_len = 0;
+	if (!dst || !src)
+		return (0);
+	while (src[src_len])
+		src_len++;
+	if (size == 0)
+		return (src_len);
+	while (src[i] && i < size - 1)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (src_len);
 }
-
-/*int main () {
-   char str[50];
-
-   strcpy(str,"This is string.h library function");
-   puts(str);
-
-   ft_memset(str,'$',7);
-   puts(str);
-
-   return(0);
-}*/

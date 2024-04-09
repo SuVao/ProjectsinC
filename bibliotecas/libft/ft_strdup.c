@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/09 09:42:23 by marvin            #+#    #+#             */
+/*   Updated: 2024/04/09 09:42:23 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -24,7 +36,7 @@ char *ft_strdup(const char *s, size_t n)
 	return (str_cpy);
 }
 
-int main()
+/*int main()
 {
     char source[] = "GeeksForGeeks";
  
@@ -35,4 +47,4 @@ int main()
     printf("%s", target);
 	free(target);
     return 0;
-}
+}*/

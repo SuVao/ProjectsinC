@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/09 09:44:07 by marvin            #+#    #+#             */
+/*   Updated: 2024/04/09 09:44:07 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -28,7 +40,7 @@ char	*ft_strrchr(const char *str, int c)
 	return (&s1[i]);
 }
 
-int main () {
+/*int main () {
 
    const char str[] = "https://www.tutorialspoint.com";
    const char ch = '.';
@@ -38,4 +50,4 @@ int main () {
 
    printf("String after |%c| is - |%s|\n", ch, ret);
    return(0);
-}
+}*/

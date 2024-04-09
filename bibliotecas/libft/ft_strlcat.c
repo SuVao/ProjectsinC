@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/09 09:42:41 by marvin            #+#    #+#             */
+/*   Updated: 2024/04/09 09:42:41 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
@@ -24,7 +36,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	return (a + c);
 }
 
-int		main()
+/*int		main()
 {
 	char			dest[] = { "puta que " };
 	const char		src[] = { "pariu!"};
@@ -35,4 +47,4 @@ int		main()
 	res = ft_strlcat(dest, src, i);
 	printf("tamanho da string final: %ld \n", res);
 	return (0);
-}
+}*/

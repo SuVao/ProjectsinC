@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/09 09:43:38 by marvin            #+#    #+#             */
+/*   Updated: 2024/04/09 09:43:38 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
 
@@ -26,7 +38,7 @@ char	*ft_strnstr(const char *src, char *to_find, size_t tam)
 	return (0);
 }
 
-int main() {
+/*int main() {
     const char source[] = {"Hello, world! This is a test."};
     char substring[] = {"world"};
     size_t max_len = 15; // Limite máximo de caracteres a serem pesquisados
@@ -39,4 +51,4 @@ int main() {
     }
 
     return 0;
-}
+}*/

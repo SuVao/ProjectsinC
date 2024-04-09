@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/09 09:40:11 by marvin            #+#    #+#             */
+/*   Updated: 2024/04/09 09:40:11 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
 
@@ -30,7 +42,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	return (final_str);
 }
 
-int main () {
+/*int main () {
    const char str[] = "https://www.tutorialspoint.com";
    const char ch = '.';
    char *ret;
@@ -40,4 +52,4 @@ int main () {
    printf("String after |%c| is - |%s|\n", ch, ret);
 
    return(0);
-}
+}*/

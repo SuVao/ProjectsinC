@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 09:41:27 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/09 09:41:27 by marvin           ###   ########.fr       */
+/*   Created: 2024/04/09 09:38:41 by marvin            #+#    #+#             */
+/*   Updated: 2024/04/09 09:38:41 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
-void *ft_memset(void *ptr, int value, int num)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int		i;
-	unsigned char	*char_ptr;
+	void	*ptr;
 
-	i = 0;
-	char_ptr = ptr;
-	while (i < num)
-		char_ptr[i++] = value;
+	ptr = malloc(count * size);
+	// verifica se a alocação foi bem sucedida
+	if (ptr)
+	// preenche a memória alocada com zeros
+		ft_bzero(ptr, count * size);
 	return (ptr);
 }
-
-/*int main () {
-   char str[50];
-
-   strcpy(str,"This is string.h library function");
-   puts(str);
-
-   ft_memset(str,'$',7);
-   puts(str);
-
-   return(0);
-}*/

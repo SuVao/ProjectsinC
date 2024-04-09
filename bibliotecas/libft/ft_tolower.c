@@ -1,38 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 09:41:27 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/09 09:41:27 by marvin           ###   ########.fr       */
+/*   Created: 2024/04/09 09:44:20 by marvin            #+#    #+#             */
+/*   Updated: 2024/04/09 09:44:20 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-void *ft_memset(void *ptr, int value, int num)
+int		ft_tolower(int c)
 {
-	int		i;
-	unsigned char	*char_ptr;
-
-	i = 0;
-	char_ptr = ptr;
-	while (i < num)
-		char_ptr[i++] = value;
-	return (ptr);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
-
-/*int main () {
-   char str[50];
-
-   strcpy(str,"This is string.h library function");
-   puts(str);
-
-   ft_memset(str,'$',7);
-   puts(str);
-
-   return(0);
-}*/

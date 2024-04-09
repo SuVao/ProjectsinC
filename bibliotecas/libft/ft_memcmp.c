@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/09 09:40:19 by marvin            #+#    #+#             */
+/*   Updated: 2024/04/09 09:40:19 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
 
@@ -20,7 +32,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (str_s1[i] - str_s2[i]);
 }
 
-int main () {
+/*int main () {
    char str1[15];
    char str2[15];
    int ret;
@@ -39,4 +51,4 @@ int main () {
    }
    
    return(0);
-}
+}*/
