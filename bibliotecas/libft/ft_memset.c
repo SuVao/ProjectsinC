@@ -13,10 +13,10 @@
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memset(void *ptr, int value, int num)
+void	*ft_memset(void *ptr, int value, int num)
 {
-	int		i;
 	unsigned char	*char_ptr;
+	int				i;
 
 	i = 0;
 	char_ptr = ptr;

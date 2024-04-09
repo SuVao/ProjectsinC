@@ -34,7 +34,7 @@ char	*ft_strrchr(const char *str, int c)
 	while (s1[i] != c)
 	{
 		if (s1[i] == c)
-			break;
+			break ;
 		i--;
 	}
 	return (&s1[i]);

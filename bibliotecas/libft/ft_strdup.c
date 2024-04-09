@@ -14,7 +14,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-char *ft_strdup(const char *s, size_t n)
+char	*ft_strdup(const char *s, size_t n)
 {
 	const char		*src;
 	char			*str_cpy;

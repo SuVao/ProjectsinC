@@ -12,14 +12,16 @@
 
 #include <stdio.h>
 
-int		ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
+	char	*s;
 	int		i;
 
 	i = 0;
-	while(str[i])
+	s = (char *)str;
+	while (str[i])
 		i++;
-	return(i);
+	return (i);
 }
 
 /*int	main()

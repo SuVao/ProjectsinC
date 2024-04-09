@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const char	*str_s1;
 	const char	*str_s2;
@@ -24,7 +24,8 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	str_s2 = s2;
 	i = 0;
 	tam = (int)n;
-	while (i < tam && (str_s1[i] == str_s2[i] && str_s1[i] != '\0' && str_s2[i] != '\0'))
+	while (i < tam && (str_s1[i] == str_s2[i]
+			&& str_s1[i] != '\0' && str_s2[i] != '\0'))
 		i++;
 	if (tam == 0)
 		return (0);

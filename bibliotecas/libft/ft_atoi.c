@@ -13,11 +13,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	char	*s1;
-	int		i;
 	int		sign;
+	int		i;
 	int		res;
 
 	res = 0;

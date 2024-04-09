@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int		ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
 	int		i;
 
@@ -26,7 +26,7 @@ int		ft_strlen(const char *str)
 void	*ft_memchr(const void *str, int c, size_t n)
 {
 	const char		*char_str;
-	void		*final_str;
+	void			*final_str;
 	size_t			i;
 
 	i = 0;

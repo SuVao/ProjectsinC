@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t		ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	src_len;

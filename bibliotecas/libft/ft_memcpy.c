@@ -13,11 +13,11 @@
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	const unsigned char		*char_src;
-	unsigned char		*char_dest;
-	size_t		i;
+	unsigned char			*char_dest;
+	size_t					i;
 
 	char_src = src;
 	char_dest = dest;
